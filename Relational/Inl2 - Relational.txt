@@ -1,1 +1,3 @@
-..
+Uppgift 1	-	σ sport == 'Boule' (sp)
+Uppgift 2	-	σ antal <45 (tf)
+Uppgift 3	-	π namn (σ ford == 'Cykel' (f))
