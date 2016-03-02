@@ -31,3 +31,8 @@ CREATE VIEW v15 as SELECT distinct uv.namn, k.knamn FROM ((uv join tf on uv.kkod
 CREATE VIEW v16 as SELECT beer FROM b natural join pb natural join uv natural join (SELECT * FROM tf WHERE antal = (SELECT min (antal) ant FROM tf WHERE antal > (SELECT min (antal) FROM tf)));
 
 CREATE VIEW V17 as SELECT distinct rum FROM (p join uv on p.namn = uv.namn) WHERE p.namn not in(SELECT kansv FROM tf); 
+
+CREATE VIEW v19 as SELECT rum from p where namn in(select namn from pb where sysnr in(select sysnr from b where land ='USA')) 
+and namn in(select namn from sp where sport ='Fotboll') 
+and namn in(select namn from f where ford = 'Cykel')
+and namn in(select namn from uv where kkod in(select kkod from k where knamn = 'Affarssystem'));
