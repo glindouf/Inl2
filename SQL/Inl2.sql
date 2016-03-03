@@ -31,6 +31,8 @@ CREATE VIEW v16 as SELECT distinct beer FROM b natural join pb natural join uv n
 
 CREATE VIEW V17 as SELECT distinct rum FROM (p join uv on p.namn = uv.namn) WHERE p.namn not in(SELECT kansv FROM tf); 
 
+CREATE VIEW v18 as SELECT distinct namn FROM uv WHERE namn not in(select namn from uv where termin>'ht2010' AND termin<'ht2012' or termin>'vt2010' AND termin<'vt2012');
+
 CREATE VIEW v19 as SELECT rum from p where namn in(select namn from pb where sysnr in(select sysnr from b where land ='USA')) 
 and namn in(select namn from sp where sport ='Fotboll') 
 and namn in(select namn from f where ford = 'Cykel')
