@@ -36,5 +36,4 @@ and namn in(select namn from sp where sport ='Fotboll')
 and namn in(select namn from f where ford = 'Cykel')
 and namn in(select namn from uv where kkod in(select kkod from k where knamn = 'Affarssystem'));
 
-CREATE VIEW v20 as select distinct k.knamn,uv.namn from k natural join uv natural join pb where namn=(select namn from pb where liter =(select max(liter) from pb));
-
+CREATE VIEW v20 as select distinct uv.namn, k.knamn from k natural join uv natural join pb where namn=(select namn from pb where liter =(select max(liter) from pb)) order by k.knamn;
