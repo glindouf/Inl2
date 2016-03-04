@@ -1,5 +1,6 @@
 Uppgift 1	-	σ sport == 'Boule' (sp)
 Uppgift 2	-	σ antal <45 (tf)
 Uppgift 3	-	π namn (σ ford == 'Cykel' (f))
-Uppgift 4 	-	π namn ((σ land == 'Belgien' (b)) ⋈(pb))
+Uppgift 4 -	π namn ((σ land == 'Belgien' (b)) ⋈(pb))
 Uppgift 5	-	
+Uppgift 6 - π sport(sp) - (σ sport (σ sport == sportx and namn != namnx (( ρ sport ➡ sportx, namn ➡ namnx (sp)) * (sp))))
