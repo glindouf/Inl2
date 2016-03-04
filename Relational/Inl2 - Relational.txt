@@ -2,4 +2,5 @@ Uppgift 1	-	σ sport == 'Boule' (sp)
 Uppgift 2	-	σ antal <45 (tf)
 Uppgift 3	-	π namn (σ ford == 'Cykel' (f))
 Uppgift 4 	-	π namn ((σ land == 'Belgien' (b)) ⋈(pb))
-Uppgift 5	-	
+Uppgift 5	-	π namn (σ sport == 'Bowling' and nickname == 'SUP' (sp⋈k⋈uv))
+Uppgift 6	-	
