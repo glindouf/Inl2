@@ -24,6 +24,7 @@ CREATE VIEW v12 as SELECT distinct knamn from (k join uv on k.kkod = uv.kkod) wh
 
 CREATE VIEW v13 as SELECT namn FROM sp WHERE sport = ‘Jogging’ and namn not in (SELECT namn FROM f WHERE ford = ‘Bil’) and namn in (SELECT namn FROM pb WHERE sysnr in (SELECT sysnr FROM b WHERE land=’Danmark’));
 
+Create view v14 as select sport from sp group by sport having count (namn) = (select count (distinct namn) from sp);
 
 CREATE VIEW v15 as SELECT distinct uv.namn, k.knamn FROM ((uv join tf on uv.kkod = tf.kkod AND uv.termin = tf.termin) join k on k.kkod = tf.kkod) WHERE antal >= (SELECT max(antal) FROM tf);
 
