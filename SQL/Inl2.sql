@@ -16,9 +16,9 @@ CREATE VIEW v8 as SELECT namn FROM uv group by namn having count(namn AND kkod)=
 
 CREATE VIEW V9 as SELECT distinct uv.namn FROM (uv join k on uv.kkod=k.kkod) WHERE knamn = ‘Affarssystem’ except SELECT distinct namn FROM (pb join b on pb.sysnr=b.sysnr) WHERE land = ‘Finland’;
 
-CREATE VIEW v10 as SELECT p.namn, px.namn, p.rum, p.tel, px.tel FROM p, p px WHERE p.rum = px.rum and p.tel != px.tel; 						-->		 // EJ FÄRDIG - SKRIVER UT DUBBELT
+CREATE VIEW v10 as SELECT distinct p.namn, px.namn, p.rum, p.tel, px.tel from p, p px where p.rum = px.rum and p.tel != px.tel and p.namn<px.namn;
 
-CREATE VIEW v11 as SELECT p.tel FROM ((p join pb on p.namn = pb.namn) join b on b.sysnr = pb.sysnr) group by tel having count(land) =1;  	-->		//	EJ FÄRDIG - SKRIVER UT FYRA/FEM
+CREATE VIEW v11 as SELECT p.tel FROM b, pb, p where b.sysnr=pb.sysnr and pb.namn=p.namn group by p.namn having count (distinct land) =1;
 
 CREATE VIEW v12 as SELECT distinct knamn from (k join uv on k.kkod = uv.kkod) where uv.namn = ’Lennart’ and uv.kkod not in (select kkod from uv where namn = ‘Kjell’ or namn = ‘Marie’) order by knamn;
 
