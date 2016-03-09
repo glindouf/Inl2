@@ -13,5 +13,12 @@ Uppgift 7   -  d1 = π namn (σ ford == 'GL' (f))
                d7 = π knamn (σ kkod (d6) ⋈ (k))
 Uppgift 8   -  π namn (uv) - (σ namn (σ namn == namnx and termin != terminx and kkod != kkodx (( ρ namn ➡ namnx, kkod ➡ kkodx, termin ➡                 terminx (uv)) * (uv))))) //FELFELFEL
 Uppgift 9:  -  (π namn (σ knamn == 'Affarssystem'(uv⋈k))) - π namn (σ land == 'Finland'(pb⋈b))
+
+Uppgift 10:
+del1 = π namn, namnx, rum, tel, telx (σ namn != namnx and rum == rumx (ρ namn ➡ namnx, rum ➡ rumx, tel ➡ telx (p)*p))
+del2 = π namn, namnx, rum, tel, telx (σ namn != namnx and tel==telx (ρ namn ➡ namnx, rum ➡ rumx, tel ➡ telx (p)*p))
+del1 - del2
+
+
 Uppgift 11: - π tel (p) - (π tel (σ tel == telx and namn = namn and sysnr = sysnr and land != landx 
               ((tel ➡ telx, land ➡ landx (p)) * (pb) * (b))))
