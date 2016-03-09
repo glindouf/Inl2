@@ -29,3 +29,11 @@ u2 = π kkod (σ namn (σ namn=='Kjell' (uv)))
 u3 = π kkod (σ namn (σ namn=='Lennart' (uv)))
 u4 = u3 - u2 - u1
 u5 = π knamn (σ kkod (u4)⋈k)
+
+Uppgift 13:
+namn1 = π sysnr (σ sysnr (σ land=='Danmark' (b)))
+namn2 = π namn (σ sysnr (namn2) ⋈pb)
+namn3 = π namn (σ namn (σ sport =='Jogging' (sp)))
+namn4 = π namn (σ namn (σ ford =='Bil' (f)))
+namn5 = π namn (σ namn (namn2)⋈(namn3)) - (σ namn (namn4))
+
