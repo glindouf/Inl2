@@ -23,3 +23,9 @@ del1 - del2
 Uppgift 11: - π tel (p) - (π tel (σ tel == telx and namn = namn and sysnr = sysnr and land != landx 
               ((tel ➡ telx, land ➡ landx (p)) * (pb) * (b))))  //Jävligt fel
  
+Uppgift 12: 
+u1 = π kkod (σ namn (σ namn=='Marie' (uv)))
+u2 = π kkod (σ namn (σ namn=='Kjell' (uv)))
+u3 = π kkod (σ namn (σ namn=='Lennart' (uv)))
+u4 = u3 - u2 - u1
+u5 = π knamn (σ kkod (u4)⋈k)
