@@ -21,4 +21,5 @@ del1 - del2
 
 
 Uppgift 11: - π tel (p) - (π tel (σ tel == telx and namn = namn and sysnr = sysnr and land != landx 
-              ((tel ➡ telx, land ➡ landx (p)) * (pb) * (b))))
+              ((tel ➡ telx, land ➡ landx (p)) * (pb) * (b))))  //Jävligt fel
+ 
