@@ -37,3 +37,5 @@ namn3 = π namn (σ namn (σ sport =='Jogging' (sp)))
 namn4 = π namn (σ namn (σ ford =='Bil' (f)))
 namn5 = π namn (σ namn (namn2)⋈(namn3)) - (σ namn (namn4))
 
+Uppgift 15: 
+π namn, knamn (k⋈(uv⋈(tf -π kkod, antal, termin, kansv(σ antal < antalx(tf⋈(ρ kkod ➡ kkodx, antal ➡ antalx, kansv ➡ kansvx, termin ➡ terminx (tf)))))))
