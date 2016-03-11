@@ -39,3 +39,15 @@ namn5 = π namn (σ namn (namn2)⋈(namn3)) - (σ namn (namn4))
 
 Uppgift 15: 
 π namn, knamn (k⋈(uv⋈(tf -π kkod, antal, termin, kansv(σ antal < antalx(tf⋈(ρ kkod ➡ kkodx, antal ➡ antalx, kansv ➡ kansvx, termin ➡ terminx (tf)))))))
+
+Uppgift 16:
+tf1 = π antal (tf)
+tf2 = ρ antal ➡ antalx (tf1)
+tf3 = tf1 * tf2
+tf4 = π antal (σ antal > antalx (tf3))
+tf5 = π antal (tf4)
+tf5 = ρ antal ➡ antaly (tf4)
+tf6 = tf4 * tf5
+tf7 = π antal (σ antal > antaly (tf6))
+tf8 = tf4 - tf7
+tf9 = π beer (b⋈pb⋈uv⋈tf⋈tf8)
