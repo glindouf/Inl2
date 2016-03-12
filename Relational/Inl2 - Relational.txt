@@ -51,3 +51,16 @@ tf6 = tf4 * tf5
 tf7 = π antal (σ antal > antaly (tf6))
 tf8 = tf4 - tf7
 tf9 = π beer (b⋈pb⋈uv⋈tf⋈tf8)
+
+Uppgift 17:
+c1 = π namn (uv) - π namn (ρ kansv  namn(tf))
+Svar: 	π rum (p⋈c1)
+
+Uppgift 20: 
+del1 = π liter (pb)
+del2 = ρ liter ➡ literx(del1)
+del3 = del1*del2
+del4 = π liter (σ liter < literx(del3))
+del5 = del1-del4
+del6 = π kkod, namn (uv⋈pb⋈del5)
+Svar: 	π namn, knamn(k⋈uv⋈del6)
