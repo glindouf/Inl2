@@ -1,4 +1,4 @@
-Uppgift 1	-  σ sport == 'Boule' (sp)
+﻿Uppgift 1	-  σ sport == 'Boule' (sp)
 Uppgift 2	-  σ antal <45 (tf)
 Uppgift 3	-  π namn (σ ford == 'Cykel' (f))
 Uppgift 4 	-  π namn ((σ land == 'Belgien' (b)) ⋈(pb))
@@ -18,7 +18,7 @@ Uppgift 10:
 del1 = π namn, namnx, rum, tel, telx (σ namn != namnx and rum == rumx (ρ namn ➡ namnx, rum ➡ rumx, tel ➡ telx (p)*p))
 del2 = π namn, namnx, rum, tel, telx (σ namn != namnx and tel==telx (ρ namn ➡ namnx, rum ➡ rumx, tel ➡ telx (p)*p))
 del1 - del2
-
+EJ GODKÄND
 
 Uppgift 11: - π tel (p) - (π tel (σ tel == telx and namn = namn and sysnr = sysnr and land != landx 
               ((tel ➡ telx, land ➡ landx (p)) * (pb) * (b))))  //Jävligt fel
@@ -37,6 +37,9 @@ namn3 = π namn (σ namn (σ sport =='Jogging' (sp)))
 namn4 = π namn (σ namn (σ ford =='Bil' (f)))
 namn5 = π namn (σ namn (namn2)⋈(namn3)) - (σ namn (namn4))
 
+Uppgift 14
+π namn, sport (sp) ÷ π namn (sp)
+
 Uppgift 15: 
 π namn, knamn (k⋈(uv⋈(tf -π kkod, antal, termin, kansv(σ antal < antalx(tf⋈(ρ kkod ➡ kkodx, antal ➡ antalx, kansv ➡ kansvx, termin ➡ terminx (tf)))))))
 
@@ -51,3 +54,6 @@ tf6 = tf4 * tf5
 tf7 = π antal (σ antal > antaly (tf6))
 tf8 = tf4 - tf7
 tf9 = π beer (b⋈pb⋈uv⋈tf⋈tf8)
+
+Uppgift 18
+π namn(uv) - π namn (σ termin == 'ht2010' or termin == 'ht2011' or termin == 'vt2011' or termin == 'vt2012'(uv))
