@@ -1,7 +1,7 @@
 ﻿Uppgift 1	-  σ sport == 'Boule' (sp)
 Uppgift 2	-  σ antal <45 (tf)
 Uppgift 3	-  π namn (σ ford == 'Cykel' (f))
-Uppgift 4 	-  π namn ((σ land == 'Belgien' (b)) ⋈(pb))
+Uppgift 4 	-  π namn, beer ((σ land == 'Belgien' (b)) ⋈(pb))
 Uppgift 5	-  π namn (σ sport == 'Bowling' and nickname == 'SUP' (sp⋈k⋈uv))
 Uppgift 6	-  π sport(sp) - (σ sport (σ sport == sportx and namn != namnx (( ρ sport ➡ sportx, namn ➡ namnx (sp)) * (sp))))
 Uppgift 7   -  d1 = π namn (σ ford == 'GL' (f)) 
@@ -11,14 +11,14 @@ Uppgift 7   -  d1 = π namn (σ ford == 'GL' (f))
                d5 = π namn (σ namn == namn (d1) ⋈ (d2) ⋈ (d4)) 
                d6 = π kkod (σ namn (d5) ⋈ (uv))            
                d7 = π knamn (σ kkod (d6) ⋈ (k))
-Uppgift 8   -  π namn (uv) - (σ namn (σ namn == namnx and termin != terminx and kkod != kkodx (( ρ namn ➡ namnx, kkod ➡ kkodx, termin ➡                 terminx (uv)) * (uv))))) //FELFELFEL
+Uppgift 8   -  π namn (uv) - (σ namn (σ namn == namnx and termin != terminx and kkod != kkodx (( ρ namn ➡ namnx, kkod ➡ kkodx, termin ➡   terminx (uv)) * (uv))))) //FELFELFEL
 Uppgift 9:  -  (π namn (σ knamn == 'Affarssystem'(uv⋈k))) - π namn (σ land == 'Finland'(pb⋈b))
 
 Uppgift 10:
 del1 = π namn, namnx, rum, tel, telx (σ namn != namnx and rum == rumx (ρ namn ➡ namnx, rum ➡ rumx, tel ➡ telx (p)*p))
 del2 = π namn, namnx, rum, tel, telx (σ namn != namnx and tel==telx (ρ namn ➡ namnx, rum ➡ rumx, tel ➡ telx (p)*p))
 del1 - del2
-EJ GODKÄND
+// EJ GODKÄND AV LENNART
 
 Uppgift 11: - π tel (p) - (π tel (σ tel == telx and namn = namn and sysnr = sysnr and land != landx 
               ((tel ➡ telx, land ➡ landx (p)) * (pb) * (b))))  //Jävligt fel
@@ -32,7 +32,7 @@ u5 = π knamn (σ kkod (u4)⋈k)
 
 Uppgift 13:
 namn1 = π sysnr (σ sysnr (σ land=='Danmark' (b)))
-namn2 = π namn (σ sysnr (namn2) ⋈pb)
+namn2 = π namn (σ sysnr (namn1) ⋈pb)
 namn3 = π namn (σ namn (σ sport =='Jogging' (sp)))
 namn4 = π namn (σ namn (σ ford =='Bil' (f)))
 namn5 = π namn (σ namn (namn2)⋈(namn3)) - (σ namn (namn4))
@@ -55,5 +55,18 @@ tf7 = π antal (σ antal > antaly (tf6))
 tf8 = tf4 - tf7
 tf9 = π beer (b⋈pb⋈uv⋈tf⋈tf8)
 
+Uppgift 17:
+c1 = π namn (uv) - π namn (ρ kansv ➡ namn(tf))
+π rum (p⋈c1)
+
 Uppgift 18
-π namn(uv) - π namn (σ termin == 'ht2010' or termin == 'ht2011' or termin == 'vt2011' or termin == 'vt2012'(uv))
+π namn(uv) - π namn (σ termin >= 'ht2010' and termin <= 'ht2011' or termin >= 'vt2011' and termin <= 'vt2012'(uv))
+
+Uppgift 20: 
+del1 = π liter (pb)
+del2 = ρ liter ➡ literx(del1)
+del3 = del1*del2
+del4 = π liter (σ liter < literx(del3))
+del5 = del1-del4
+del6 = π kkod, namn (uv⋈pb⋈del5)
+Svar: 	π namn, knamn(k⋈uv⋈del6)
